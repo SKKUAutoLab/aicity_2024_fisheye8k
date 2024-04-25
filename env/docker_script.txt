@@ -1,4 +1,4 @@
-sudo nvidia-docker run --name mon -it -v ./:/mon/ --shm-size=64g nvcr.io/nvidia/pytorch:24.01-py3
+sudo nvidia-docker run --name aic24_track04 -it -v ./:/AIC24-Track04/ --shm-size=64g nvcr.io/nvidia/pytorch:24.01-py3
 
 chmod +x install.sh
 conda init bash
