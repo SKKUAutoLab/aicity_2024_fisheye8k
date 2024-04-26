@@ -9,7 +9,8 @@ project_dir=$(dirname "$current_dir")
 mon_dir=$(dirname "$project_dir")
 runml_dir="${project_dir}/runml"
 data_dir="${mon_dir}/data"
-yolor_dir="${mon_dir}/src/mon_extra/vision/detect/yolor"
+yolor_dir="${mon_dir}/src/yolor"
+zoo_dir="${mon_dir}/zoo"
 
 # Constants
 test_cameras=(
@@ -68,17 +69,17 @@ image_sizes=(
 
 # Predict
 cd "${yolor_dir}" || exit
-save_dir="${current_dir}/run/predict/aic24_fisheye8k/submission"
+save_dir="${current_dir}/run/predict/aicity_2024_fisheye8k/submission"
 if [ -d "${save_dir}" ]; then rm -Rf "${save_dir}"; fi
 for ((i=0; i < ${#test_cameras[@]}; i++)); do
-    source="${data_dir}/aic/aic24_fisheye8k/${test_cameras[i]}/images"
+    source="${data_dir}/aicity/aicity_2024_fisheye8k/${test_cameras[i]}/images"
     python -W ignore my_predict.py \
       --root "${current_dir}" \
-      --config "${current_dir}/config/yolor_d6_aic24_fisheye8k_1920.yaml" \
+      --config "${current_dir}/config/yolor_d6_aicity_2024_fisheye8k_1920.yaml" \
       --weights \
-        "${current_dir}/run/train/yolor_d6_aic24_fisheye8k_all_1920_epoch_250/weights/best_f1.pt,
-         ${current_dir}/run/train/yolor_d6_aic24_fisheye8k_all_1536_epoch_250/weights/best_f1.pt,
-         ${current_dir}/run/train/yolor_d6_aic24_fisheye8k_all_1280_epoch_250/weights/best_f1.pt"\
+        "${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1920_epoch_250_best_f1.pt,
+         ${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1536_epoch_250_best_f1.pt,
+         ${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1280_epoch_250_best_f1.pt"\
       --model "yolor_d6" \
       --data "${source}" \
       --save-dir "${save_dir}" \

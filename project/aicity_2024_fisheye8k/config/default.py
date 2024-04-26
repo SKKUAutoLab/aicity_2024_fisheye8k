@@ -21,16 +21,13 @@ TASKS = [
 # List all models that are used in this project.
 MODELS = [
     "yolor_d6",
-    "yolov7_e6e",
-    "yolov8x",
-    "yolov9_e",
 ]
 # If unsure, run the following script:
 # mon.print_table(mon.MODELS | mon.EXTRA_MODELS)
 
 # List all datasets that are used in this project.
 DATASETS = [
-    "aic24_fisheye8k",
+    "aicity_2024_fisheye8k",
 ]
 # If unsure, run the following script:
-# mon.print_table(mon.DATASETS | mon.DATASETS_EXTRA)
+# mon.print_table(mon.DATASETS | mon.DATASETS_EXTRA)+++

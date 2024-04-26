@@ -16,8 +16,8 @@ eval "$(conda shell.bash hook)"
 conda activate cyclegan
 python $current_dir/data.py
 
-python $src_dir/test.py --dataroot $data/aic24_fisheye8k/images --name a2e --model test --no_dropout --checkpoints_dir $zoo_dir --results_dir $save_dir
-python $src_dir/test.py --dataroot $data/aic24_fisheye8k/images --name a2n --model test --no_dropout --checkpoints_dir $zoo_dir --results_dir $save_dir
+python $src_dir/test.py --dataroot $data/aicity/aicity_2024_fisheye8k/images --name a2e --model test --no_dropout --checkpoints_dir $zoo_dir --results_dir $save_dir
+python $src_dir/test.py --dataroot $data/aicity/aicity_2024_fisheye8k/images --name a2n --model test --no_dropout --checkpoints_dir $zoo_dir --results_dir $save_dir
 
-python $src_dir/fake_build.py --name a2e --source_dataset $data/aic24_fisheye8k --fake_images_path $save_dir
-python $src_dir/fake_build.py --name a2n --source_dataset $data/aic24_fisheye8k --fake_images_path $save_dir
+python $src_dir/fake_build.py --name a2e --source_dataset $data/aicity/aicity_2024_fisheye8k --fake_images_path $save_dir
+python $src_dir/fake_build.py --name a2n --source_dataset $data/aicity/aicity_2024_fisheye8k --fake_images_path $save_dir
