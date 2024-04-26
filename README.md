@@ -1,6 +1,6 @@
 # [CVPRW 2024] Improving Object Detection to Fisheye Cameras with Open-Vocabulary Pseudo-Label Approach
 
-This repository contains the source code for 2024 AI City Challenge Track 4 (Road Object Detection in Fish-Eye Cameras).
+This repository contains the source code for AI City Challenge 2024 Track 4 (Road Object Detection in Fish-Eye Cameras).
 
 - Team Name: SKKU-AutoLab 
 - Team ID: 05
@@ -69,7 +69,7 @@ The pretrained weights, data, and running environments are included in a Docker 
 
 Installation using Docker (recommended):
 ```bash
-docker run --name aicity_2024_fisheye8k --gpus all -it phlong/aicity_2024_fisheye8k
+docker run --name aicity_2024_fisheye8k --gpus all -it skkuautolab/aicity_2024_fisheye8:latest
 ```
 
 ---
