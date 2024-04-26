@@ -19,6 +19,19 @@ train:
     - aicity/aicity_2024_fisheye8k/train/camera16_a/images
     - aicity/aicity_2024_fisheye8k/train/camera17_a/images
     - aicity/aicity_2024_fisheye8k/train/camera18_a/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera3_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera5_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera6_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera8_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera9_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera10_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera12_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera13_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera14_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera15_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera16_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera17_e/images
+    - aicity/aicity_2024_fisheye8k/train_syn/camera18_e/images
     - aicity/aicity_2024_fisheye8k/val/camera1_a_test/images
     - aicity/aicity_2024_fisheye8k/val/camera2_a_test/images
     - aicity/aicity_2024_fisheye8k/val/camera4_a_e_m_n_test/images

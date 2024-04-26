@@ -77,9 +77,9 @@ for ((i=0; i < ${#test_cameras[@]}; i++)); do
       --root "${current_dir}" \
       --config "${current_dir}/config/yolor_d6_aicity_2024_fisheye8k_1920.yaml" \
       --weights \
-        "${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1920_epoch_250_best_f1.pt,
-         ${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1536_epoch_250_best_f1.pt,
-         ${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1280_epoch_250_best_f1.pt"\
+        "${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1920_epoch_300_best_f1.pt,
+         ${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1536_epoch_300_best_f1.pt,
+         ${zoo_dir}/yolor_d6_aicity_2024_fisheye8k_all_1280_epoch_300_best_f1.pt"\
       --model "yolor_d6" \
       --data "${source}" \
       --save-dir "${save_dir}" \

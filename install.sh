@@ -11,8 +11,8 @@
 
 echo "$HOSTNAME"
 
-install_type=${1:-"gui"}
-read -e -i "$install_type" -p "Machine Type [gui, cmd]: " install_type
+install_type=${1:-"cmd"}
+# read -e -i "$install_type" -p "Machine Type [gui, cmd]: " install_type
 # echo "Machine Type [gui, cmd]: "
 # read install_type
 
@@ -143,7 +143,7 @@ export PYTHONDONTWRITEBYTECODE=1
 
 echo -e "\nSetting DATA_DIR"
 data_dir="${root_dir}/data"
-read -e -i "$data_dir" -p "Enter DATA_DIR=" input
+# read -e -i "$data_dir" -p "Enter DATA_DIR=" input
 data_dir="${input:-$data_dir}"
 if [ "$data_dir" != "" ]; then
     export DATA_DIR="$data_dir"
