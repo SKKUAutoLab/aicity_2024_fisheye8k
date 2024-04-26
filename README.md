@@ -92,6 +92,13 @@ Enter the Docker container and run the following commands:
 
 ### Style transfer train/test
 
+- Install the environment:
+```bash
+cd aicity_2024_fisheye8k
+./install_cycle_gan.sh
+```
+_It can take a while to install all dependencies._
+
 - To train the model, please run as bellow:
 ```bash
 conda activate cyclegan
