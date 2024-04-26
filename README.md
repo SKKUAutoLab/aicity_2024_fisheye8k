@@ -19,14 +19,24 @@ aicity_2024_fisheye8k
     |             |__ test
     |             |     |__ <camera_id>
     |             |     |     |__ images
-    |             |     |     |__ labels
+    |             |     |     |__ labels (Pseudo-labels from YOLO-World)
     |             |     ...
     |             |__ train
     |             |     |__ <camera_id>
     |             |     |     |__ images
     |             |     |     |__ labels
     |             |     ...
+    |             |__ train_syn (Synthesis nighttime images)
+    |             |     |__ <camera_id>
+    |             |     |     |__ images
+    |             |     |     |__ labels
+    |             |     ...
     |             |__ val
+    |             |     |__ <camera_id>
+    |             |     |     |__ images
+    |             |     |     |__ labels
+    |             |     ...
+    |             |__ val_syn ((Synthesis nighttime images))
     |             |     |__ <camera_id>
     |             |     |     |__ images
     |             |     |     |__ labels
@@ -80,8 +90,54 @@ The final submission results will be saved in: `aicity_2024_fisheye8k/project/ai
 ## Training
 Enter the Docker container and run the following commands:
 
-### Train Detectors
+### Style transfer train/test
 
+- To train the model, please run as bellow:
+```bash
+conda activate cyclegan
+cd aicity_2024_fisheye8k/project/style_transfer
+./train.sh
+```
+All training models and training results will be stored in: `run/train/cyclegan_pix2pix`
+To view the training results per epoch, please look for the `html` file in: `run/train/cyclegan_pix2pix` directory.
+
+- To generate synthesis dataset, run the `infer.sh` script:
+```bash
+conda activate cyclegan
+cd aicity_2024_fisheye8k/project/style_transfer
+./infer.sh
+```
+Synthesis images and new synthetic dataset will be generated automatically. All generated images and additional datasets will be stored in `run/generate`
+
+### YOLO-World train/test
+
+- To train the model, please run as bellow:
+```bash
+conda activate yolor_world
+cd aicity_2024_fisheye8k/project/yolo_world
+./train.sh
+```
+All training models and training results will be stored in: `run/train/yolo_world`
+
+- For inferencing, run the `predict.sh` script:
+```bash
+conda activate yolor_world
+cd aicity_2024_fisheye8k/project/yolo_world
+./predict.sh
+```
+New annotations and results will be generated and stored in `/run/predict/yolo_world`
+
+### YOLOR-D6
+
+- To train the model, please run as bellow:
+```bash
+conda activate mopn
+cd aicity_2024_fisheye8k/project/aicity_2024_fisheye8k
+./run_train_1280.sh
+./run_train_1536.sh
+./run_train_1920.sh
+```
+All training models and training results will be stored in: `run/train/...`
 
 ---
 
