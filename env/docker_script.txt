@@ -1,5 +1,5 @@
 Ubuntu 22.04 + Python 2.10 + NVIDIA Driver 535 + CUDA 12.2.2:
-sudo docker run --gpus all --name mon -it -v ./:/mon/ --shm-size=64g nvcr.io/nvidia/pytorch:23.10-py3
+sudo docker run --gpus all --name aicity_2024_fisheye8k --shm-size=64g nvcr.io/nvidia/pytorch:23.10-py3
 
 chmod +x install.sh
 conda init bash

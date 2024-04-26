@@ -65,11 +65,21 @@ aicity_2024_fisheye8k
 ### Installation
 The code was implemented and tested on Ubuntu 22.04, Python 3.11 and PyTorch (>=v1.13.0) with conda environment. 
 
-The pretrained weights, data, and running environments are included in a Docker image for ease of distribution.
-
-Installation using Docker (recommended):
+- The `data` folder can be download here: [Google Drive](https://drive.google.com/file/d/1pj1hWajt2Zh_A7cIQBPyvQg7weXwhaiA/view?usp=sharing)
+- The `zoo` folder can be download here: [Google Drive](https://drive.google.com/file/d/1rGA-GCNZLaLdNzQedxsH5nwm2juuZDUd/view?usp=sharing)
+- Download the repo and install the dependencies:
 ```bash
-docker run --name aicity_2024_fisheye8k --gpus all -it skkuautolab/aicity_2024_fisheye8:latest
+cd <to_the_repo_directory>
+chmod +x install.sh
+./install.sh
+
+apt-get install ffmpeg
+apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+
+# Check installation
+conda activate mon
+python
+import mon  # Should not raise any error
 ```
 
 ---
