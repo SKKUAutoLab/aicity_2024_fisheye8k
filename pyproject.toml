@@ -38,13 +38,13 @@ classifiers = [
 ]
 packages = [
     {include="mon",       from="src"},
-    {include="mon_extra", from="src"},
+    # {include="mon_extra", from="src"},
 ]
 include = [
     "LICENSE",
     "env/IgnoreList",
     "env/README.md",
-    "env/docker.txt",
+    "env/docker_script.txt",
     "env/dockerfile",
     "env/linux_cmd.yaml",
     "env/linux_ui.yaml",
@@ -64,7 +64,7 @@ hydra-core            = {version="*", optional=true}
 kmeans_pytorch        = {version="*", optional=true}
 mediapipe             = {version="*", optional=true}
 pandas                = {version="*", optional=true}
-yolor                 = {path="src/mon_extra/vision/detect/yolor", develop=true}
+yolor                 = {path="src/yolor", develop=true}
 
 [tool.poetry.extras]
 dev = [

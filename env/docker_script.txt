@@ -1,4 +1,4 @@
-sudo nvidia-docker run --name aic24_track04 -it -v ./:/aicity_2024_fisheye8k/ --shm-size=64g nvcr.io/nvidia/pytorch:24.01-py3
+sudo nvidia-docker run --name aicity_2024_fisheye -it -v ./:/aicity_2024_fisheye8k/ --shm-size=64g nvcr.io/nvidia/pytorch:24.01-py3
 
 chmod +x install.sh
 conda init bash

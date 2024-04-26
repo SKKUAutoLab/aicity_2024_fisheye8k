@@ -1,3 +1,3 @@
 # Data
 
-Download pretrained weights from url and extract here.
+Please download pretrained weights from urls and extract here.

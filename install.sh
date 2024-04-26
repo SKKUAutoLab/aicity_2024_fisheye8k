@@ -68,8 +68,8 @@ case "$OSTYPE" in
 
         # Install FFMPEG
         if sudo -n true 2>/dev/null; then
-            sudo apt-get install ffmpeg
-            sudo apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+            apt-get install ffmpeg
+            apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
         else
             apt-get install ffmpeg
             apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
