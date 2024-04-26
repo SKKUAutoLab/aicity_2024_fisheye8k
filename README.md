@@ -111,6 +111,13 @@ Synthesis images and new synthetic dataset will be generated automatically. All 
 
 ### YOLO-World train/test
 
+- Install the environment:
+```bash
+cd aicity_2024_fisheye8k
+./install_yolo_world.sh
+```
+_It can take a while to install all dependencies._
+
 - To train the model, please run as bellow:
 ```bash
 conda activate yolor_world
