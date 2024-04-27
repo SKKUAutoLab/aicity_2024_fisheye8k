@@ -19,8 +19,12 @@ if __name__ == '__main__':
     for dir in ['train', 'val']:
         os.makedirs(os.path.join(des, dir), exist_ok=True)
         for cam in os.listdir(os.path.join(src, dir)):
+            if not os.path.isdir(os.path.join(src, dir, cam)):
+                continue
             os.makedirs(os.path.join(des, dir, cam), exist_ok=True)
             for folder in os.listdir(os.path.join(src, dir, cam)):
+            	# if(os.path.isdir(folder)):
+                #     print(folder)
                 os.makedirs(os.path.join(des, dir, cam, folder), exist_ok=True)
                 if folder == 'images':
                     for img in os.listdir(os.path.join(src, dir, cam, folder)):
