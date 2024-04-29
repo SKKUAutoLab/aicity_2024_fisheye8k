@@ -8,8 +8,8 @@ save_dir="${main_dir}/run/predict/yolo_world"
 #echo $data/aicity/aicity_2024_fisheye8k/images
 
 
-eval "$(conda shell.bash hook)"
-conda activate yolo-world
+# eval "$(conda shell.bash hook)"
+# conda activate yolo-world
 python $current_dir/data.py
 
 python $src_dir/image_demo.py $src_dir/configs/fisheye8k/yolo_world_x.py zoo/yolo_world_epoch_100.pth $data/aicity/aicity_2024_fisheye8k/images 'Bus,Bike,Car,Pedestrian,Truck' --topk 100 --threshold 0.2 --output-dir $save_dir

@@ -137,7 +137,7 @@ _It can take a while to install all dependencies._
 
 - To train the model, please run as bellow:
 ```bash
-conda activate yolor_world
+conda activate yolo_world
 cd aicity_2024_fisheye8k/project/yolo_world
 ./train.sh
 ```
@@ -145,7 +145,7 @@ All training models and training results will be stored in: `run/train/yolo_worl
 
 - For inferencing, run the `predict.sh` script:
 ```bash
-conda activate yolor_world
+conda activate yolo_world
 cd aicity_2024_fisheye8k/project/yolo_world
 ./predict.sh
 ```
